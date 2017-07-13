@@ -1,0 +1,36 @@
+.detail-article {
+	.detail {
+		padding: 2.25rem 0;
+			
+		@include breakpoint(tablet) {
+			padding: 3.25rem 0;
+		}
+	}
+
+	.title-area {
+		margin: 0 0 24px;
+
+		.label-title {
+			margin: 0;
+			font-size: 1.4em;
+
+			@include breakpoint(tablet) {
+				font-size: 1.8em;
+			}
+
+			&:after {
+				bottom: 8px;
+			}
+		}
+	}
+
+	.content-area {
+		p {
+			margin: 0 0 24px;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,115 @@
+.how-it-works {
+	background-color: $bg-default;
+
+	.desc-area {
+		text-align: center;
+	}
+
+	.tab-area {
+		.nav-tabs {
+			float: none;
+			margin: 0;
+			border: 0;
+
+			@include breakpoint(tablet) {
+				padding: 40px 0 0 20px;
+			}
+
+			@include breakpoint(wide) {
+				padding: 40px 80px 0 100px;
+			}
+
+			li {
+				margin: 0 0 24px;
+				width: 100%;
+
+				&:last-child {
+					margin: 0;
+				}
+
+				&.active {
+					>a {
+						background: linear-gradient(to right, #084b71 50%, #e5e5e5 50%);
+						background-size: 200%;
+						// background: $primary;
+						color: $white;
+					}
+
+					>a,
+					>a:hover,
+					>a:focus {
+						border: 0;
+					}
+				}
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+
+			a {
+				position: relative;
+				border: 0;
+				color: $primary;
+				margin: 0;
+				line-height: 18px;
+				padding: 0px 24px 0px 66px;
+				height: 50px;
+				width: 100%;
+				background: linear-gradient(to right, $primary 50%, $bg-gray 50%);
+				background-size: 200%;
+				background-position: right;
+				border-radius: 30px;
+				transition:all 1s ease;
+
+				&:hover {
+				    background-position: left;
+					color: $white;
+				}
+
+				.number {
+					position: absolute;
+					top: 50%;
+					bottom: initial;
+					left: 0;
+					right: initial;
+					width: 50px;
+					height: 50px;
+					line-height: 50px;
+					text-align: center;
+					background: $primary;
+					color: $white;
+					font-family: poppins-medium;
+					font-size: 1.4em;
+					border-radius: 100%;
+					transform: translate(0, -50%);
+					
+					@include breakpoint(tablet) {
+						font-size: 1.7em;
+					}
+				}
+
+				.text {
+					display: table-cell;
+					vertical-align: middle;
+					height: 50px;
+				}
+			}
+		}
+
+		.tab-content {
+			// @include breakpoint(wide) {
+			// 	padding: 0 100px 0 0;
+			// }
+		}
+
+		.col-sm-5,
+		.col-sm-7 {
+			padding: 0;
+		}
+
+		.col-sm-6 {
+			padding: 0;
+		}
+	}
+}

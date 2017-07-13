@@ -1,0 +1,74 @@
+.client {
+	background-color: $bg-semigray;
+    text-align: center;
+    padding: 2rem 0 3.5rem;
+    
+    @include breakpoint(tablet) {
+        padding: 3.25rem 0;
+    }
+
+    .title {
+		font-size: 1.6em;
+		text-transform: uppercase;
+		margin: 0 0 16px;
+
+		@include breakpoint(tablet) {
+			font-size: 2em;
+			margin: 0 0 24px;
+		}
+    }
+
+    .client-slide {
+
+		@include breakpoint(tablet) {
+			padding: 0 32px;
+		}
+
+		@include breakpoint(wide) {
+			padding: 0 48px;
+		}
+
+    	.wrapper {
+    		padding: 0 6px;
+            text-align: center;
+            display: table;
+            width: 100%;
+
+            @include breakpoint(tablet) {
+                padding: 0 24px;
+            }
+    	}
+
+    	a {
+            display: table-cell;
+            vertical-align: middle;
+            height: 40px;
+    	}
+
+    	img {
+			display: inline-block;
+			max-height: 40px;
+    		opacity: 0.5;
+			filter: grayscale(100%);
+			transition: all 0.3s linear;
+
+			&:hover {
+				opacity: 1;
+				filter: grayscale(0);
+			}
+    	}
+
+		.slick-dots {
+			bottom: -1.8rem;
+
+			li {
+				button {
+					width: 8px;
+					height: 8px;
+					border-radius: 100%;
+					box-shadow: none;
+				}
+			}
+		}
+    }
+}

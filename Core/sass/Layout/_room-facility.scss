@@ -1,0 +1,293 @@
+.gallery {
+	&.room-facility {
+		padding: 2.25rem 0;
+
+		.image-area {
+    // 		@include breakpoint(wide) {
+				// margin-left: 50%;
+    // 		}
+
+			.gallery-slide {
+				.image {
+					@include breakpoint(wide) {
+						// height: 600px;
+					}
+				}
+			}
+		}
+
+		.thumbnail-info {
+			margin: 0 0 2rem;
+
+			@include breakpoint(wide) {
+				margin: 0 0 3rem;
+			}
+
+			&.right-style {
+				.info-thumb {
+					// margin: 0 0 24px;
+					
+					@include breakpoint(wide) {
+						margin: 0;
+					}
+				}
+
+				// .image-area {
+				// 	margin: 0;
+				
+				// 	@include breakpoint(wide) {
+				// 		margin: 0;
+				// 	}
+				// }
+			}
+
+
+
+			&:last-child {
+				margin: 0
+			}
+		}
+	}
+}
+
+.room-facility {
+	padding: 2.25rem 0;
+
+	.title {
+		margin: 0;
+		font-size: 1.4em;
+		margin: 0 0 10px;
+		
+		@include breakpoint(wide) {
+			font-size: 1.8em;
+		}
+	}
+
+	.title-area {
+		margin: 0 0 16px;
+
+		.label-title {
+			margin: 0;
+			font-size: 1.4em;
+
+			@include breakpoint(wide) {
+				font-size: 1.8em;
+			}
+
+			&:after {
+				bottom: 8px;
+			}
+		}
+	}
+
+	.facility-group {
+		margin: 4.25rem 0 0;
+
+		&:first-child {
+			margin: 0;
+		}
+	}
+	
+	.list-item {
+		margin: 0 0 24px;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		.item-info {
+			background-color: $bg-gray;
+		}
+
+		.image-area {
+			padding: 0;
+			margin: 0 0 24px;
+
+			@include breakpoint(wide) {
+				margin: 0;
+				padding: 0 15px 0 0;
+			}
+
+			.gallery-slide {
+				a {
+					display: block;
+					position: relative;
+
+					&:hover {
+						.hover-info {
+							@include breakpoint(wide) {
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+
+						.overlay {
+							@include breakpoint(wide) {
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+
+						.icon {
+							@include breakpoint(wide) {
+								background-color: transparent;
+								top: 16px;
+								right: 16px;
+							}
+						}
+					}
+				}
+
+				.image {
+					height: 200px;
+					display: block;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
+					
+					@include breakpoint(wide) {
+						height: 280px;
+					}
+				}
+
+				.icon {
+					position: absolute;
+					top: 0;
+					left: initial;
+					right: 0;
+					bottom: initial;
+					font-size: 1.4em;
+					color: $white;
+					padding: 12px;
+					background-color: rgba(0, 0, 0, 0.4);
+					z-index: 1;
+					transition: all 0.3s linear;
+
+					@include breakpoint(wide) {
+						padding: 16px;
+						font-size: 2em;
+					}
+				}
+
+				.hover-info {
+					position: absolute;
+					top: 50%;
+					left: 20px;
+					right: 20px;
+					bottom: initial;
+					z-index: 1;
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+					text-align: center;
+					font-size: 1.7em;
+					color: $white;
+					transition: all 0.3s linear;
+					transform: translate(0, -50%);
+				}
+
+				.overlay {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 0;
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+					background-color: rgba(0, 0, 0, 0.6);
+					transition: all 0.3s linear;
+				}
+			}
+		}
+
+		.info-thumb {
+			margin: 0 0 24px;
+
+			@include breakpoint(wide) {
+				margin: 0;
+				padding-top: 30px;
+			}
+
+			.facility-list {
+				.title {
+					font-size: 1.4em;
+
+					@include breakpoint(wide) {
+						font-size: 1.8em;
+					}
+				}
+			}
+
+			p {
+				font-size: 0.9em;
+				margin: 0;
+			}
+
+			.col-md-6 {
+				padding: 0;
+
+				.wrapper {
+					padding: 0;
+
+					@include breakpoint(wide) {
+						padding: 0 4px;
+					}
+				}
+
+				p {
+					margin: 0;
+					font-size: 0.9em;
+
+					i {
+						vertical-align: middle;
+						margin: 0 4px 0 0;
+					}
+
+					span {
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+
+		.price-book {
+			margin: 0 0 24px;
+
+			@include breakpoint(wide) {
+				margin: 0;
+				padding-top: 40px;
+				padding-right: 30px;
+				padding-left: 8px;
+			}
+
+			.desc-price {
+				font-style: italic;
+				font-size: 0.8em;
+				margin: 5px 0 0;
+			    letter-spacing: 0.5pt;
+			}
+
+			.desc-info {
+				display: block;
+				font-size: 0.8em;
+				margin: 10px 0 0;
+				line-height: 180%;
+			}
+
+			.button-area {
+			    margin: 16px 0 0;
+
+			    .button {
+			    	width: 100%;
+
+					@include breakpoint(wide) {
+						width: auto;
+					}
+			    }
+			}
+		}
+	}
+}

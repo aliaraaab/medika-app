@@ -1,0 +1,165 @@
+.form-booking {
+	.form-area {
+		padding: 2.25rem 0;
+		
+		@include breakpoint(tablet) {
+			padding: 3.25rem 0;
+		}
+
+		.title-area {
+			margin: 0 0 32px;
+
+			p {
+				margin: 0;
+			}
+		}
+	}
+
+	.form-group {
+		position: relative;
+
+		.form-control {
+			outline: 0;
+			box-shadow: none;
+			border-radius: 0;
+			border-color: $black;
+			padding: 11px 10px 10px;
+			height: auto;
+			color: $text-darkgray;
+			font-size: 16px;			
+
+			@include breakpoint(tablet) {
+				font-size: 1.2em;			
+				padding: 11px 20px 10px;
+			}
+
+			&:focus {
+				border-color: $tosca;
+			}
+		}
+
+		::-webkit-input-placeholder {
+			color: $text-darkgray;
+		}
+
+		:-moz-placeholder {
+			color: $text-darkgray;
+		}
+
+		::-moz-placeholder {
+			color: $text-darkgray;
+		}
+
+		:-ms-input-placeholder {  
+			color: $text-darkgray;
+		}
+
+		label {
+			text-transform: uppercase;
+			letter-spacing: 0.5pt;
+			line-height: 130%;
+			display: inline-block;
+			position: relative;
+			font-size: 0.9em;
+			color: $text-darker;
+			font-family: poppins-regular;
+		}
+
+		textarea {
+			&.form-control {
+				resize: none;
+				height: 160px;
+			}
+		}
+
+		.datepicker {
+			cursor: pointer;
+		}
+
+		.icon-down {
+			position: absolute;
+			top: initial;
+			bottom: 0;
+			left: initial;
+			right: 10px;
+			font-size: 1.6em;
+			height: 48px;
+			line-height: 48px;
+			pointer-events: none;
+			
+			@include breakpoint(tablet) {
+				right: 20px;
+			}
+		}
+
+		.col-xs-6 {
+			padding: 0 8px 0 0;
+
+			&:last-child {
+				padding: 0 0 0 8px;
+			}
+		}
+
+		.input-text {
+			position: relative;
+		}
+
+		.help-block {
+			color: $red;
+			margin: 0;
+			font-weight: normal;
+			font-family: poppins-regular;
+			position: absolute;
+			top: 2px;
+			right: 0;
+			bottom: initial;
+			left: initial;
+			font-size: 0.8em;
+			letter-spacing: 0.5pt;
+		}
+
+		&.has-error {
+			.form-control {
+				border-color: $red;
+			}
+
+			::-webkit-input-placeholder {
+				color: $red;
+			}
+
+			:-moz-placeholder {
+				color: $red;
+			}
+
+			::-moz-placeholder {
+				color: $red;
+			}
+
+			:-ms-input-placeholder {  
+				color: $red;
+			}
+
+			.icon-down {
+				color: $red;
+			}
+		}
+	}
+
+	.button-area {
+		margin: 2.25rem 0 0;
+		text-align: right;
+
+		@include breakpoint(tablet) {
+			margin: 3.25rem 0 0;
+		}
+
+		.button {
+			width: 100%;
+
+			@include breakpoint(tablet) {
+				width: auto;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,488 @@
+.gallery {
+	padding: 2rem 0;
+	
+	@include breakpoint(wide) {
+		padding: 6.25rem 0;
+	}
+
+	.thumbnail-info {
+		position: relative;
+
+		.info-thumb {
+			padding: 0;
+
+			@include breakpoint(wide) {
+				margin: 0;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: initial;
+				bottom: initial;
+				transform: translate(0, -50%);
+			}
+
+			.info-detail {
+				p {
+					font-size: 0.9em;
+					
+					@include breakpoint(wide) {
+						font-size: 1em;
+					}
+				}
+			}
+
+			.facility-list {
+				margin: 16px 0 0;
+
+				h5 {
+					font-size: 1.1em;
+					color: $black;
+					letter-spacing: 0.5pt;
+					margin: 0 0 8px;
+					font-family: poppins-regular;
+					
+					@include breakpoint(wide) {
+						font-size: 1.2em;
+					}
+				}
+
+				.col-sm-6 {
+					padding: 0;
+
+					.wrapper {
+						@include breakpoint(wide) {
+							padding: 0 4px;
+						}
+					}
+
+					p {
+						margin: 0;
+						font-size: 0.9em;
+
+						i {
+							vertical-align: middle;
+							margin: 0 4px 0 0;
+						}
+
+						span {
+							display: inline-block;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+
+			.price-area {
+				margin: 32px 0 0;
+
+				.desc-price {
+					font-style: italic;
+					font-size: 0.8em;
+					margin: 5px 0 0;
+				    letter-spacing: 0.5pt;
+				}
+
+				.desc-info {
+					display: block;
+					font-size: 0.8em;
+					margin: 10px 0 0;
+					line-height: 180%;
+				}
+			}
+
+			.link-area {
+				margin: 24px 0 0;
+				font-size: 1.2em;
+
+				a {
+					color: $tosca;
+
+					&:hover {
+    					color: $secondary;
+    					
+						i {
+	    					border-color: $secondary;
+							margin: 0 0 0 10px;
+						}
+					}
+				}
+
+				span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				i {
+					width: 20px;
+					height: 20px;
+					line-height: 16px;
+					border: 1px solid $tosca;
+					font-size: 0.9em;
+					margin: 0 0 0 4px;
+					text-align: center;
+					vertical-align: middle;
+					border-radius: 100%;
+            		transition: margin cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s;
+				}
+			}
+
+			.button-area {
+			    margin: 16px 0 0;
+
+			    .button {
+			    	width: 100%;
+
+					@include breakpoint(wide) {
+						width: auto;
+					}
+			    }
+			}
+		}
+
+		&.right-style {
+			.info-thumb {
+				margin: 0 0 24px;
+					margin: 0;
+				
+				@include breakpoint(wide) {
+					margin: 0;
+					right: 0;
+					left: initial;
+				}
+			}
+
+			.image-area {
+				// margin: 0 0 32px;
+				margin: 0 0 24px;
+				// margin: 0;
+			
+				@include breakpoint(wide) {
+					margin: 0;
+				}
+				
+				.wrapper {
+					@include breakpoint(wide) {
+						padding: 0 8% 0 0;
+					}
+				}
+			}
+		}
+	}
+
+	.image-area {
+		padding: 0;
+		margin: 0 0 24px;
+
+		@include breakpoint(wide) {
+			margin: 0 0 0 50%;
+		}
+
+		.wrapper {
+			@include breakpoint(wide) {
+				padding: 0 0 0 8%;
+			}
+		}
+
+		.gallery-image,
+		.gallery-slide {
+			a {
+				display: block;
+				position: relative;
+
+
+				&:hover {
+					.hover-info {
+						@include breakpoint(wide) {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+
+					.overlay {
+						@include breakpoint(wide) {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+
+					.icon {
+						@include breakpoint(wide) {
+							background-color: transparent;
+							top: 16px;
+							right: 16px;
+						}
+					}
+				}
+			}
+
+			.image {
+				display: block;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				height: 200px;
+				height: 0;
+				padding: 0 0 60%;
+				
+				@include breakpoint(wide) {
+					padding: 0 0 75%;
+					// height: 500px;
+				}
+			}
+
+			.icon {
+				position: absolute;
+				top: 0;
+				left: initial;
+				right: 0;
+				bottom: initial;
+				font-size: 1.4em;
+				color: $white;
+				padding: 12px;
+				background-color: rgba(0, 0, 0, 0.4);
+				z-index: 1;
+				transition: all 0.3s linear;
+				
+				@include breakpoint(wide) {
+					padding: 16px;
+					font-size: 2em;
+				}
+			}
+
+			.hover-info {
+				position: absolute;
+				top: 50%;
+				left: 25px;
+				right: 25px;
+				bottom: initial;
+				z-index: 1;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				text-align: center;
+				font-size: 1.7em;
+				color: $white;
+				transition: all 0.3s linear;
+				transform: translate(0, -50%);
+			}
+
+			.overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 0;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				background-color: rgba(0, 0, 0, 0.6);
+				transition: all 0.3s linear;
+			}
+		}
+	}
+}
+
+.gallery-section {
+	padding: 2.25rem 0 4.25rem;
+
+	.title-area {
+		margin: 0 0 16px;
+		position: relative;
+
+		.label-title {
+			margin: 0;
+			font-size: 1.4em;
+
+			@include breakpoint(tablet) {
+				font-size: 1.8em;
+			}
+
+			&:after {
+				bottom: 8px;
+			}
+		}
+
+		.more {
+			font-size: 0.9em;
+			text-transform: uppercase;
+			font-family: poppins-regular;
+			letter-spacing: 0.5pt;
+			color: $tosca;
+			position: absolute;
+			top: 50%;
+			bottom: initial;
+			right: 0;
+			left: initial;
+			transform: translate(0 , -50%);
+
+			@include breakpoint(tablet) {
+				font-size: 1em;
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			i {
+				font-size: 1.1em;
+				width: 18px;
+				height: 18px;
+				line-height: 14px;
+				border: 1px solid $tosca;
+				margin: -2px 0 0 4px;
+				text-align: center;
+				vertical-align: middle;
+				border-radius: 100%;
+
+				@include breakpoint(tablet) {
+					width: 20px;
+					height: 20px;
+					font-size: 1em;
+					line-height: 16px;
+				}
+			}
+
+			&:hover {
+				color: $secondary;
+
+				i {
+					border-color: $secondary;
+				}
+			}
+		}
+	}
+
+	.list-gallery {
+		display: inline-block;
+		padding: 3px;
+
+		@include breakpoint(tablet) {
+			padding: 5px;
+		}
+
+		&:hover {
+			.hover-info {
+				@include breakpoint(wide) {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			.overlay {
+				@include breakpoint(wide) {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			.icon {
+				@include breakpoint(wide) {
+					background-color: transparent;
+					top: 16px;
+					right: 16px;
+				}
+			}
+		}
+
+		.image {
+			padding: 0 0 80%;
+			position: relative;
+			display: block;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+
+		.img-responsive {
+			display: none;
+		}
+
+		.icon {
+			position: absolute;
+			top: 0;
+			left: initial;
+			right: 0;
+			bottom: initial;
+			font-size: 1.4em;
+			color: $white;
+			padding: 12px;
+			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 1;
+			transition: all 0.3s linear;
+
+			@include breakpoint(wide) {
+				padding: 16px;
+				font-size: 2em;
+			}
+		}
+
+		.hover-info {
+			position: absolute;
+			top: 50%;
+			left: 25px;
+			right: 25px;
+			bottom: initial;
+			z-index: 1;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			text-align: center;
+			font-size: 1.7em;
+			color: $white;
+			transition: all 0.3s linear;
+			transform: translate(0, -50%);
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 0;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			background-color: rgba(0, 0, 0, 0.6);
+			transition: all 0.3s linear;
+		}
+	}
+
+	.vid-gallery {
+		.play-button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			right: initial;
+			bottom: initial;
+			z-index: 0;
+			width: 64px;
+			height: 64px;
+			background: url('../img/play-button.png') center no-repeat;
+			background-size: contain;
+			transition: all 0.3s linear;
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover {
+			.play-button {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+
+	.list-gallery-group {
+		margin: 2.25rem 0 0;
+
+		@include breakpoint(tablet) {
+			margin: 4.25rem 0 0;
+		}
+
+		&:first-child {
+			margin: 0;
+		}
+	}
+}

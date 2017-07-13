@@ -1,0 +1,555 @@
+body {
+	&.onScroll {
+		header {
+			box-shadow: none;
+
+			nav {
+				.menu {
+					padding: 18px 0px;
+
+					a {
+						&.facility {
+							background-color: $black;
+							color: $white;
+							border-color: $black;
+
+							&:hover {
+								background-color: $primary;
+								border-color: $primary;
+								opacity: 1;
+							}
+						}
+					}
+				}
+
+				.menu-mobile {
+					.menu {
+						padding: 0 0 10px;
+						background-color: rgba(255, 255, 255, 0.95);
+					}
+				}
+			}
+
+			.brand-logo {
+				font-size: 1.1em;
+				@include breakpoint(wide) {
+					font-size: 1.4em;
+				}
+
+				.logo {
+					background-image: url('../img/logo-black.png');
+					width: 120px;
+					height: 60px;
+
+					@include breakpoint(wide) {
+						width: 140px;
+						height: 70px;
+					}
+				}
+
+				strong {
+					color: $black;
+				}
+			}
+
+			.toggle-down {
+				.menu-toggle-btn {
+					span {
+						background-color: $black;
+					}
+				}
+			}
+		}
+
+		&.full {
+			header {
+				background: rgba(0,0,0,0.3);
+				background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.3)), color-stop(70%, rgba(0,0,0,0.09)), color-stop(92%, rgba(0,0,0,0.02)), color-stop(100%, rgba(0,0,0,0)));
+				background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+				background: -o-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+				background: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+				background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+
+				&.show-menu {
+					background-color: rgba(0, 0, 0, 0.4);
+				}
+
+				nav {
+					.menu {
+						.lang {
+							.or {
+								background-color: $white;
+							}
+						}
+
+						a {
+							color: $white;
+							text-shadow: 0 1px 15px rgba(54,54,54,0.8);
+
+							&.facility {
+								background-color: $white;
+								color: $black;
+								border-color: $white;
+								text-shadow: none;
+
+								&:hover {
+									@include breakpoint(wide) {
+										background-color: $black;
+										color: $white;
+										border-color: $black;
+									}
+								}
+							}
+
+
+							&:hover {
+								@include breakpoint(wide) {
+									border-color: $white;
+								}
+							}
+						}
+
+						.search-area {
+							::-webkit-input-placeholder {
+								color: $white;
+							}
+
+							:-moz-placeholder {
+								color: $white;
+							}
+
+							::-moz-placeholder {
+								color: $white;
+							}
+
+							:-ms-input-placeholder {  
+								color: $white;
+							}
+
+							.search-icon {
+								color: $white;
+
+								&.click {
+									color: $white;
+									border-color: $white;
+								}
+
+								&:hover {
+									@include breakpoint(wide) {
+										border-color: $white;
+									}
+								}
+							}
+
+							input[type="text"] {
+								background-color: transparent;
+								border-color: $white;
+								color: $white;
+							}
+
+							.search {
+								small {
+									color: $white;
+								}
+							}
+						}
+					}
+
+					.menu-mobile {
+						.menu {
+							background-color: rgba(0, 0, 0, 0.4);
+						}
+					}
+				}
+
+				.brand-logo {
+					.logo {
+						background-image: url('../img/logo-white.png');
+					}
+
+					strong {
+						color: $white;
+						text-shadow: 0 1px 15px rgba(54,54,54,0.8);
+					}
+
+					small {
+						color: $white;
+						text-shadow: 0 1px 15px rgba(54,54,54,0.8);
+					}
+				}
+
+				.toggle-down {
+					.menu-toggle-btn {
+						span {
+							background-color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+header {
+	transition: all 0.3s linear;
+	background-color: rgba(255, 255, 255, 0.95);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: initial;
+	z-index: 3;
+
+	@include breakpoint(wide) {
+		box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+		padding: 16px 32px;
+	}
+
+	@include breakpoint(laptop) {
+		padding: 16px 64px;
+	}
+
+	.container {
+		padding: 0;
+
+		@include breakpoint(tablet) {
+			width: 100%;
+		}
+
+		@include breakpoint(wide) {
+			width: 750px;
+		}
+
+		@include breakpoint(desktop) {
+			width: 1170px;
+		}
+	}
+
+	&.show-menu {
+		background-color: rgba(255, 255, 255, 0.95);
+	}
+
+	.header-menu {
+		position: relative;
+		
+		@include breakpoint(wide) {
+			min-height: 60px;
+			padding: 0 0 0 160px;
+		}
+	}
+
+	nav {
+		position: relative;
+		padding: 10px 16px;
+
+		@include breakpoint(wide) {
+			padding: 0;
+		}
+
+		.menu {
+			padding: 13px 0px;
+			margin: 0;
+			display: block;
+			text-align: right;
+			transition: all 0.3s linear;
+
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 16px 0 0;
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+
+			a {
+				text-transform: uppercase;
+				padding: 9px 16px 8px 16px;
+				line-height: 130%;
+				display: block;
+				border: 1px solid transparent;
+				color: $primary;
+				letter-spacing: 1pt;
+				font-size: 1em;
+    			font-family: poppins-regular;
+				
+				@include breakpoint(wide) {
+					font-size: 0.85em;
+					padding: 9px 12px 8px 12px;
+				}
+
+
+				&.facility {
+					background-color: $tosca;
+					color: $white;
+					
+					@include breakpoint(wide) {
+						border-color: $tosca;
+					}
+
+					&:hover {
+						opacity: 0.8;
+
+						@include breakpoint(wide) {
+							border-color: $tosca;
+						}
+					}
+				}
+
+				&:hover {
+					@include breakpoint(wide) {
+						color: $secondary;
+						border-color: $secondary;
+					}
+				}
+			}
+
+			.lang {
+				a {
+					float: left;
+				}
+
+				.or {
+					width: 1px;
+					height: 15px;
+					margin: 9px 8px 9px;
+					float: left;
+					background-color: $primary;
+					transition: all 0.3s linear;
+				}
+			}
+
+			.search-area {
+				position: relative;
+
+				::-webkit-input-placeholder {
+					color: $primary;
+				}
+
+				:-moz-placeholder {
+					color: $primary;
+				}
+
+				::-moz-placeholder {
+					color: $primary;
+				}
+
+				:-ms-input-placeholder {  
+					color: $primary;
+				}
+
+				.search-icon {
+					text-transform: uppercase;
+					padding: 9px 16px 8px 16px;
+					line-height: 130%;
+					border: 1px solid transparent;
+					color: $primary;
+					letter-spacing: 1pt;
+					font-size: 1em;
+					cursor: pointer;
+					transition: all 0.3s linear;
+					
+					@include breakpoint(wide) {
+						font-size: 0.85em;
+						padding: 9px 12px 8px 12px;
+					}
+
+					&.click {
+						color: $secondary;
+						border-color: $secondary;
+					}
+
+					&:hover {
+						@include breakpoint(wide) {
+							color: $secondary;
+							border-color: $secondary;
+						}
+					}
+				}
+
+				.search-form {
+					display: none;
+					position: absolute;
+					top: 63px;
+					left: initial;
+					right: 0;
+					bottom: initial;
+
+					.search {
+						position: relative;
+
+						small {
+							font-family: poppins-regular;
+							text-transform: uppercase;
+							letter-spacing: 0.5pt;
+							font-size: 0.64em;
+							position: absolute;
+							top: 50%;
+							left: initial;
+							right: 20px;
+							bottom: initial;
+							color: $secondary;
+							pointer-events: none;
+							transform: translate(0, -50%);
+						}
+					}
+
+					input[type="text"] {
+						background-color: rgba(255,255,255,0.95);
+						padding: 10px 90px 10px 20px;
+						outline: 0;
+						width: 280px;
+						border: 1px solid transparent;
+					}
+				}
+			}
+		}
+
+		.menu-mobile {
+			.menu {
+				text-align: left;
+				position: absolute;
+				top: 100%;
+				bottom: initial;
+				left: 0;
+				right: 0;
+				opacity: 0;
+				padding: 10px 0;
+				visibility: hidden;
+				pointer-events: none;
+				background-color: rgba(255, 255, 255, 0.95);
+				transition: all 0.3s linear;
+				box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.05);
+
+				&.show {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: visible;
+				}
+
+				li {
+					display: block;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.header-logo {
+		display: inline-block;
+
+		@include breakpoint(wide) {
+			position: absolute;
+			top: 0;
+			bottom: initial;
+			left: 0;
+			right: initial;
+		}
+		
+		.brand-logo {
+			display: inline-block;
+		}
+	}
+
+	.header-left {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: initial;
+		bottom: initial;
+		transform: translate(0, -50%);
+	}
+
+	.header-right {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		left: initial;
+		bottom: initial;
+		transform: translate(0, -50%);
+	}
+
+	.toggle-down {
+		z-index: 1;
+		position: absolute;
+		top: 50%;
+		bottom: initial;
+		right: 16px;
+		left: initial;
+		transform: translate(0, -50%);
+
+		.menu-toggle-btn { 
+			cursor: pointer; 
+			display: inline-block; 
+			vertical-align: middle; 
+
+			span {
+				background: $primary;
+				display: block; 
+				width: 30px;
+				height: 2px;
+				margin-bottom: 8px;
+				transition: all 0.3s linear;
+
+				&:last-child {
+					margin-bottom: 0; 
+				}
+			}
+		}
+
+		&.toggleDrawer {
+			.menu-toggle-btn {
+				span {
+					&:nth-child(1),
+					&:nth-child(2) {
+						margin: 0;
+						transform: translate(0px, 2px) rotate(-45deg) scalex(1);
+						-webkit-transform: translate(0px, 2px) rotate(-45deg) scalex(1);
+					}
+					&:nth-child(2) {
+						transform: translate(0px, 0) rotate(45deg) scalex(1);
+						-webkit-transform: translate(0px, 0) rotate(45deg) scalex(1);
+					}
+				}
+			}
+		}
+	}
+
+	.brand-logo {
+		padding: 0;
+		margin: 0;
+		font-size: 0.85em;
+		
+		@include breakpoint(wide) {
+			font-size: 1.1em;
+		}
+		a {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.logo {
+			display: table;
+			width: 100px;
+			height: 50px;
+			background-image: url('../img/logo-default.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			transition: all 0.3s linear;
+
+			@include breakpoint(wide) {
+				width: 120px;
+				height: 60px;
+			}
+		}
+
+		strong {
+			display: none;
+		}
+	}
+}
+

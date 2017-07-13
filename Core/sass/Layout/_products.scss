@@ -1,0 +1,119 @@
+.products {
+	background-color: $bg-gray;
+	position: relative;
+	
+	@include breakpoint(wide) {
+		padding-top: 100px;
+	}
+	// .wrapper-content {
+	// 	padding: 32px 0;
+	// }
+
+	.container {
+		z-index: 1;
+		position: relative;
+	}
+
+	.bg-overlay {
+		background: url('../img/mcd_img_1.png') center no-repeat;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		opacity: 0.3;
+		pointer-events: none;
+	}
+
+	.desc-area {
+		text-align: center;
+		margin: 0 0 32px;
+
+		@include breakpoint(wide) {
+			padding: 0 100px;
+		}
+	}
+
+	.tab-area {
+		@include breakpoint(wide) {
+			padding: 0 100px;
+		}
+
+		p {
+			color: $primary;
+		}
+
+		.nav-tabs {
+			border: 0;
+			display: table;
+			margin: 0 auto 30px;
+
+			li {
+				margin: 0 30px 0 0;
+				padding: 0 0 16px;
+
+				&.active {
+					>a {
+						background-color: $white;
+						color: $primary;
+
+						&:after {
+							border-top-color: $white;
+						}
+					}
+
+					>a,
+					>a:hover,
+					>a:focus {
+						border: 0;
+					}
+				}
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+
+			a {
+				position: relative;
+				background-color: #d2d5d9;
+				border: 0;
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				color: $primary;
+				margin: 0;
+				padding: 20px 15px;
+				border-radius: 6px;
+
+				&:after {
+					content: "";
+					position: absolute;
+					top: initial;
+					bottom: -16px;
+					left: 50%;
+					right: initial;
+					border-top: 16px solid #d2d5d9;
+					border-right: 8px solid transparent;
+					border-left: 8px solid transparent;
+					// border-bottom: 20px solid transparent;
+					transform: translate(-50%, 0);
+					transition: all 0.3s linear;
+				}
+
+				i {
+					font-size: 4em;
+					vertical-align: middle;
+					line-height: 100%;
+
+					&.fa-mobile {
+						font-size: 5em;
+						line-height: 73%;
+					}
+				}
+			}
+		}
+	}
+}

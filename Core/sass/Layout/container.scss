@@ -1,0 +1,460 @@
+:root {
+	// background-color: $bg-default;
+}
+
+body {
+	font-size: 14px;
+    color: $text-darkgray;
+    font-family: poppins-light;
+    background-color: transparent;
+    position: relative;
+    letter-spacing: 0.3pt;
+}
+
+p {
+	font-size: 1em;
+	line-height: 180%;
+	letter-spacing: 0.5pt;
+	// margin: 0 0 20px;
+}
+
+h5 {
+	font-size: 1.2em;
+	line-height: 180%;
+	letter-spacing: 0.5pt;
+	margin: 0 0 16px;
+}
+
+a {
+	text-decoration: none;
+	color: $primary;
+	transition: all 0.3s linear;
+
+	&:hover {
+		color: $tosca;
+		text-decoration: none;
+	}
+
+	&:focus {
+		text-decoration: none;
+		outline: 0;
+		color: $tosca;
+	}
+}
+
+ol,
+ul {
+    padding: 0 0 0 16px;
+	
+	&.flat {
+		margin: 0;
+
+		li {
+			display: inline-block;
+			margin: 0 8px 0 0;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+video {
+	max-width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+section {
+	padding: 56px 0;
+
+	.wrapper-content {
+		position: relative;
+	}
+}
+
+.hide {
+	display: none!important;
+}
+
+.show-mobile {
+	display: block!important;
+
+	@include breakpoint(wide) {
+		display: none!important;
+	}
+}
+
+.show-desktop {
+	display: none!important;
+
+
+	@include breakpoint(wide) {
+		display: block!important;
+	}
+}
+
+.row {
+	margin: 0;
+}
+
+.container {
+	padding: 0 16px;
+
+	@include breakpoint(wide) {
+		padding: 0;
+	}
+}
+
+.label-title {
+	text-transform: uppercase;
+    margin: 0 0 16px;
+    letter-spacing: 1pt;
+    line-height: 130%;
+    display: inline-block;
+    position: relative;
+    font-size: 0.9em;
+    color: $text-darker;
+    font-family: poppins-regular;
+
+    &:after {
+		content: "";
+		position: relative;
+		height: 1px;
+		background-color: currentColor;
+		display: inline-block;
+		width: 40px;
+		bottom: 4px;
+		left: 4px;
+    }
+}
+
+.title {
+	margin: 0 0 24px;
+	font-size: 1.8em;
+	line-height: 130%;
+	color: $primary;
+	font-family: poppins-regular;
+	
+	@include breakpoint(wide) {
+		font-size: 2.6em;
+	}
+	
+
+	&.smaller {
+		font-size: 1.6em;
+
+		@include breakpoint(wide) {
+			font-size: 2.2em;
+		}
+	}
+
+	&.center {
+		text-align: center;
+
+		hr {
+			margin: 8px auto 0;
+		}
+	}
+
+	hr {
+		width: 160px;
+		margin: 8px 0 0;
+		border-top: 2px solid $primary;
+	}
+}
+
+.subtitle {
+	margin: 0 0 24px;
+	font-size: 1.6em;
+	line-height: 130%;
+	color: $primary;
+	font-family: poppins-regular;
+
+	@include breakpoint(wide) {
+		font-size: 2.2em;
+	}
+}
+
+.bg-outline {
+	&:hover {
+		&:before {
+			@include breakpoint(wide) {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&:before {
+		content: '';
+		top: 50%;
+		left: 50%;
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+		z-index: 15;
+		display: block;
+		position: absolute;
+		border: 1px solid $white;
+		z-index: 1;
+		width: calc(100% - 40px);
+		height: calc(100% - 40px);
+		transform: translate(-50%, -50%);
+		transition: all 0.3s linear;
+	}
+}
+
+.content-page {
+	padding: 90px 0 0;
+
+	@include breakpoint(wide) {
+		padding: 130px 0 0;
+	}
+}
+
+.cover {
+	position: relative;
+    height: 0;
+    padding: 0 0 80%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	@include breakpoint(tablet) {
+    	padding: 0 0 40%;
+	}
+
+	.desc {
+		position: absolute;
+		top: initial;
+		left: 16px;
+		right: 16px;
+		bottom: 10%;
+		z-index: 1;
+
+		@include breakpoint(wide) {
+			left: 10%;
+			right: 10%;
+			bottom: 8%;
+		}
+
+		h3 {
+			text-transform: uppercase;
+			color: $white;
+			margin: 0;
+			font-family: poppins-medium;
+			font-size: 1.6em;
+			line-height: 130%;
+			text-shadow: 0 1px 15px rgba(54,54,54,0.8);
+			
+			@include breakpoint(wide) {
+				font-size: 2.6em;
+			}
+		}
+	}
+
+	.label-title {
+		margin: 0 0 8px;
+		color: $white;
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.2);
+		z-index: 0;
+	}
+}
+
+.scroll-to-top {
+	position: fixed;
+	top: initial;
+	left: initial;
+	bottom: 16px;
+	right: 16px;
+	text-align: center;
+	display: inline-block;
+	display: none;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 5px 10px;
+	font-size: 0.7em;
+	color: $white;
+	transition: all 0.3s linear;
+	text-shadow: 0 1px 15px rgba(54,54,54,0.5);
+
+	@include breakpoint(wide) {
+		bottom: 1.875rem;
+		right: 1.875rem;
+		color: $primary;
+		font-size: 0.8em;
+		padding: 0;
+		background-color: transparent;
+	}
+
+	i {
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+		line-height: 18px;
+		font-size: 1.5em;
+	}
+
+	span {
+		display: block;
+		margin: 6px 0 2px;
+		text-transform: uppercase;
+		font-family: poppins-regular;
+		
+		@include breakpoint(wide) {
+			margin: 8px 0 0;
+		}
+	}
+
+	&:hover {
+		color: $white;
+		
+		@include breakpoint(wide) {
+			color: $secondary;
+		}
+	}
+}
+
+.social-share {
+	margin: 24px 0 0;
+
+	span {
+		text-transform: uppercase;
+		font-size: 0.85em;
+		font-family: poppins-regular;
+		display: block;
+		margin: 0 0 8px;
+		line-height: 100%;
+	}
+
+	ul {
+		padding: 0;
+
+		li {
+			margin: 0 4px 0 0;
+
+			a {
+				color: $white;
+				width: 30px;
+				height: 30px;
+				line-height: 32px;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+				border-radius: 100%;
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+
+			&.fb {
+				a {
+					background-color: $facebook;
+				}
+			}
+
+			&.tw {
+				a {
+					background-color: $twitter;
+				}
+			}
+
+			&.pin {
+				a {
+					background-color: $pinterest;
+				}
+			}
+
+			&.gplus {
+				a {
+					background-color: $gplus;
+				}
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.jcf-select {
+	display: block;
+	outline: 0;
+	box-shadow: none;
+	border-radius: 0;
+	border-color: $black;
+	padding: 11px 32px 10px 10px;
+	height: auto;
+	color: $text-darkgray;
+	cursor: pointer;
+
+	@include breakpoint(tablet) {
+		padding: 11px 42px 10px 20px;
+	}
+
+
+	.jcf-select-text {
+		font-size: 1em;
+		margin: 0;
+		cursor: pointer;
+		font-size: 16px;
+
+		@include breakpoint(tablet) {
+			font-size: 1.2em;
+		}
+	}
+
+	.jcf-select-opener {
+		background-color: transparent;
+	}
+}
+
+.jcf-focus, 
+.jcf-focus * {
+	border-color: $tosca!important;
+}
+
+.jcf-list {
+	.jcf-option {
+		font-size: 1.2em;
+		height: auto;
+		padding: 11px 20px 10px;
+		color: $text-darkgray;
+	}
+}
+
+.jcf-select-drop {
+	.jcf-select-drop-content {
+		border-color: $tosca;
+	}
+
+	.jcf-hover {
+		background-color: $tosca;
+		color: $white;
+	}
+}
+
+.jcf-list-box {
+	.jcf-selected {
+		background-color: $tosca;
+		color: $white;
+	}
+}

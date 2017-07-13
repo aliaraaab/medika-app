@@ -1,0 +1,133 @@
+.modal {
+	.modal-dialog {
+		margin: 0;
+		width: 90%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		right: initial;
+		bottom: initial;
+		transform: translate(-50%, -50%);
+
+    	@include breakpoint(wide) {
+    		width: 60%;
+		}
+
+    	@include breakpoint(desktop) {
+    		width: auto;
+		}
+	}
+
+	&.fade {
+		.modal-dialog {
+			transform: translate(0, 100%);
+		}
+	}
+
+	&.in {
+		.modal-dialog {
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.modal-header {
+		position: relative;
+		background-color: $tosca;
+		border-bottom: 0;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		.close {
+			min-height: 0;
+			color: $white;
+			opacity: 1;
+			line-height: 100%;
+			font-size: 30px;
+			text-shadow: none;
+			font-weight: normal;
+			position: absolute;
+			top: 50%;
+			left: initial;
+			right: 15px;
+			bottom: initial;
+			height: 25px;
+			margin: 0;
+			transform: translate(0, -50%);
+		}
+
+		.modal-title {
+			text-transform: uppercase;
+			text-align: center;
+			color: $white;
+			line-height: 100%;
+			padding: 3px 0 0;
+			font-size: 1em;
+			font-family: poppins-medium;
+			letter-spacing: 1pt;
+		}
+	}
+
+	.modal-body {
+		text-align: center;
+		padding: 30px 24px;
+
+		h4 {
+			margin: 0 0 24px;
+		}
+
+		.button-area {
+			margin: 0;
+
+			p {
+				margin: 0;
+				line-height: 100%;
+				font-size: 0.8em;
+				text-transform: uppercase;
+				letter-spacing: 1pt;
+			}
+
+			li {
+				display: block;
+				margin: 0 0 8px;
+
+    			@include breakpoint(tablet) {
+					display: inline-block;
+					margin: 0 8px 0 0;
+				}
+
+				&:last-child {
+					margin: 0;
+
+					@include breakpoint(tablet) {
+						margin: 0;
+					}			
+				}
+			}
+
+			.button {
+				background-color: $secondary;
+				display: block;
+
+				@include breakpoint(tablet) {
+					display: inline-block;
+				}
+
+				&.traveloka {
+					background-color: $soft-blue;
+
+					i {
+						display: inline-block;
+						width: 100%;
+						vertical-align: middle;
+						margin: -8px 0 0;
+						height: 20px;
+						background-image: url('../img/logo-traveloka.png');
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: contain;
+					}
+				}
+			}
+		}
+	}
+}

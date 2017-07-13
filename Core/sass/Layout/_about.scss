@@ -1,0 +1,46 @@
+.about {
+	z-index: 1;
+	position: relative;
+
+	@include breakpoint(wide) {
+		padding-bottom: 0;
+	}
+
+	.desc-area {
+		text-align: center;
+		margin: 0 0 32px;
+
+		@include breakpoint(wide) {
+			padding: 0 100px;
+		}
+
+		p {
+			color: $primary;
+		}
+
+		h5 {
+			color: $primary;
+			margin: 0;
+			font-size: 1.1em;
+			
+			@include breakpoint(wide) {
+				font-size: 1.2em;
+			}
+		}
+	}
+
+	.video-area {
+		@include breakpoint(wide) {
+			// padding: 0 100px;
+		}
+
+		.media-wrapper {
+			background-color: $white;
+			
+			@include breakpoint(wide) {
+				margin: 0 0 -60px;
+				padding: 0 200px 60px;
+			}			
+		}
+	}
+}

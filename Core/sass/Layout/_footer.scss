@@ -1,0 +1,201 @@
+footer {
+	p {
+		color: $white;
+	}
+
+	ul {
+		padding: 0;
+		list-style: none;
+
+		li {
+			a {
+				color: $white;
+
+				&:hover {
+					color: $tosca;
+				}
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 2px 0 0;
+			}
+
+			i {
+				display: inline-block;
+				vertical-align: middle;
+				width: 16px;
+				text-align: center;
+				margin: 0 4px 0 0;
+			}
+		}
+	}
+
+	.col-md-9 {
+		padding: 0;
+	}
+
+	.col-md-3 {
+		padding: 0;
+	}
+
+	.nav-top {
+		padding: 2rem 0;
+		background-color: $semi-gray;
+		
+		@include breakpoint(wide) {
+			padding: 3.25rem 0;
+		}
+
+		.col-md-8 {
+			margin: 0 0 24px;
+			padding: 0;
+			
+			@include breakpoint(tablet) {
+				margin: 0;
+				padding: 0 15px;
+			}
+		}
+
+		.col-md-4 {
+			padding: 0;
+
+			@include breakpoint(tablet) {
+				padding: 0 15px;
+			}
+		}
+
+		.nav-group {
+			margin: 0 0 24px;
+
+			&:last-child {
+				margin: 0;
+			}
+
+			.form-newsletter {
+				position: relative;
+
+				input[type="text"] {
+					width: 100%;
+					background-color: rgba(255, 255, 255, 0.9);
+					padding: 8px 44px 8px 16px;
+					color: #6b6c6e;
+					outline: 0;
+					border: 0;
+					font-family: poppins-regular;
+				}
+
+				button {
+					position: absolute;
+					top: 50%;
+					bottom: initial;
+					right: 16px;
+					left: initial;
+					cursor: pointer;
+				    line-height: 100%;
+					transition: all 0.3s linear;
+					transform: translate(0, -50%);
+
+					&:hover {
+						color: $tosca;
+					}
+				}
+
+				i {
+					font-size: 1.4em;
+					line-height: 100%;
+				}
+			}
+
+			.download-link {
+				display: table;
+				width: 100%;
+
+				@include breakpoint(tablet) {
+					display: block;
+				}
+
+				li {
+					width: 50%;
+					margin: 0;
+					padding: 0 8px 0 0;
+
+					@include breakpoint(tablet) {
+						width: auto;
+					}
+
+					&:last-child {
+						padding: 0 0 0 8px;
+					}
+				}
+
+				a {
+					display: inline-block;
+					width: 100%;
+					height: 50px;
+					text-indent: -6666em;
+					-moz-background-size: contain;
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+
+					@include breakpoint(tablet) {
+						width: 140px;
+						height: 40px;
+					}
+
+					&.appstore {
+						background-image: url('../img/mcd_button_playstore.png');
+					}
+
+					&.playstore {
+						background-image: url('../img/mcd_button_appstore.png');
+					}
+				}
+			}
+		}
+	}
+	
+	.nav-bottom {
+		background-color: $dark-gray;
+		padding: 1.25rem 0;
+
+		.copyright {
+			margin: 0;
+			font-size: 0.7em;
+			letter-spacing: 0.5pt;
+		}
+	}
+
+	.label-title {
+		color: $text;
+	}
+
+	.call-us {
+		margin: 0;
+		
+		li {
+			margin: 0 0 4px;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	.social {
+		margin: 0;
+
+		li {
+			span {
+				padding: 0;
+			}
+			
+			i {
+				font-size: 1.4em;
+				width: 18px;
+			}
+		}
+	}
+}
