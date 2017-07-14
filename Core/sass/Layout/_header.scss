@@ -82,6 +82,14 @@ body {
 							.or {
 								background-color: $white;
 							}
+
+							a {
+								&:hover {
+									@include breakpoint(wide) {
+										border-color: transparent;
+									}
+								}
+							}
 						}
 
 						a {
@@ -303,19 +311,47 @@ header {
 					@include breakpoint(wide) {
 						color: $secondary;
 						border-color: $secondary;
+						border-radius: 10px;
 					}
 				}
 			}
 
 			.lang {
+				padding: 0 16px;
+
+				@include breakpoint(wide) {
+					padding: 0;
+				}
+
 				a {
 					float: left;
+					display: inline-block;
+					width: 34px;
+					height: 34px;
+					text-indent: -6666em;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
+
+					&.eng {
+						background-image: url('../img/mcd_icon_flag_usa.png');
+					}
+
+					&.id {
+						background-image: url('../img/mcd_icon_flag_indonesia.png');
+					}
+
+					&:hover {
+						@include breakpoint(wide) {
+							border-color: transparent;
+						}
+					}
 				}
 
 				.or {
 					width: 1px;
 					height: 15px;
-					margin: 9px 4px;
+					margin: 9px 8px;
 					float: left;
 					background-color: $primary;
 					transition: all 0.3s linear;
@@ -360,23 +396,32 @@ header {
 					&.click {
 						color: $secondary;
 						border-color: $secondary;
+						border-radius: 10px;
 					}
 
 					&:hover {
 						@include breakpoint(wide) {
 							color: $secondary;
 							border-color: $secondary;
+							border-radius: 10px;
 						}
 					}
 				}
 
 				.search-form {
-					display: none;
-					position: absolute;
-					top: 63px;
-					left: initial;
-					right: 0;
-					bottom: initial;
+					padding: 0 16px;
+					margin: 0 0 8px;
+
+					@include breakpoint(wide) {
+						padding: 0;
+						margin: 0;
+						display: none;
+						position: absolute;
+						top: 63px;
+						left: initial;
+						right: 0;
+						bottom: initial;
+					}
 
 					.search {
 						position: relative;
@@ -389,21 +434,31 @@ header {
 							position: absolute;
 							top: 50%;
 							left: initial;
-							right: 20px;
+							right: 10px;
 							bottom: initial;
 							color: $secondary;
 							pointer-events: none;
 							transform: translate(0, -50%);
+							
+							@include breakpoint(wide) {
+								right: 20px;
+							}
 						}
 					}
 
 					input[type="text"] {
-						background-color: rgba(255,255,255,0.95);
+						background-color: rgba(241, 241, 241, 0.8);
 						color: $primary;
-						padding: 10px 90px 10px 20px;
+						padding: 10px 80px 10px 10px;
 						outline: 0;
-						width: 280px;
 						border: 1px solid transparent;
+						width: 100%;
+						
+						@include breakpoint(wide) {
+							background-color: rgba(255,255,255,0.95);
+							padding: 10px 90px 10px 20px;
+							width: 280px;
+						}
 					}
 				}
 			}

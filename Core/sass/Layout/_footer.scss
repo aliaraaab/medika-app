@@ -1,6 +1,8 @@
 footer {
+	background-color: $bg-gray;
+
 	p {
-		color: $white;
+		// color: $white;
 	}
 
 	ul {
@@ -9,10 +11,11 @@ footer {
 
 		li {
 			a {
-				color: $white;
+				// color: $white;
+				color: $text;
 
 				&:hover {
-					color: $tosca;
+					color: $secondary;
 				}
 			}
 
@@ -41,11 +44,10 @@ footer {
 	}
 
 	.nav-top {
-		padding: 2rem 0;
-		background-color: $semi-gray;
+		padding: 2rem 0 1rem;
 		
 		@include breakpoint(wide) {
-			padding: 3.25rem 0;
+			padding: 3rem 0 1rem;
 		}
 
 		.col-md-8 {
@@ -94,6 +96,7 @@ footer {
 					left: initial;
 					cursor: pointer;
 				    line-height: 100%;
+				    color: $primary;
 					transition: all 0.3s linear;
 					transform: translate(0, -50%);
 
@@ -141,7 +144,7 @@ footer {
 					background-position: center;
 
 					@include breakpoint(tablet) {
-						width: 140px;
+						width: 130px;
 						height: 40px;
 					}
 
@@ -154,12 +157,18 @@ footer {
 					}
 				}
 			}
+
+			small {
+				margin: 8px 0 0;
+				display: block;
+			}
 		}
 	}
 	
 	.nav-bottom {
-		background-color: $dark-gray;
+		// background-color: $dark-gray;
 		padding: 1.25rem 0;
+		text-align: center;
 
 		.copyright {
 			margin: 0;
@@ -169,7 +178,9 @@ footer {
 	}
 
 	.label-title {
-		color: $text;
+		// color: $text;
+		color: $text-darkgray;
+	    font-family: poppins-medium;
 	}
 
 	.call-us {
@@ -188,6 +199,10 @@ footer {
 		margin: 0;
 
 		li {
+			a {
+				color: $primary;
+			}
+
 			span {
 				padding: 0;
 			}

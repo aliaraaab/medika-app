@@ -1,0 +1,44 @@
+.media-partner {
+	background-color: $bg-default;
+
+	.desc-area {
+		@include breakpoint(wide) {
+			padding: 0 100px;
+		}
+	}
+
+	.media-logo {
+		@include breakpoint(wide) {
+			padding: 0 100px;
+		}
+
+		.wrapper {
+			text-align: center;
+		}
+
+		.wrapper-image {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.image {
+		}
+
+		.image-logo {
+			display: inline-block;
+
+			a {
+				display: table;
+				vertical-align: middle;
+				width: 100px;
+				height: 50px;
+				margin: 8px 16px;
+
+				@include breakpoint(tablet) {
+					width: 180px;
+					height: 80px;
+				}
+			}
+		}
+	}
+}

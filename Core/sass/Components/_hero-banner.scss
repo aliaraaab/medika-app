@@ -1,10 +1,6 @@
 .hero-banner {
 	padding: 0;
 
-	// &.slick-slider {
-	// 	margin: 0 0 32px;
-	// }
-
 	.slider-banner {
 		position: relative;
 		height: calc(100vh - 40px);
@@ -13,7 +9,6 @@
 		background-position: center;
 		
 		@include breakpoint(tablet) {
-			// height: 100vh;
 			height: 0;
 			padding: 0 0 8.6%;
 		}

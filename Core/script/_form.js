@@ -20,27 +20,19 @@
         $(this).datepicker('clearDates');
     });
 
-    $(".booking-message").validate({
+    $(".form-contact").validate({
 		rules: {
-            fullname: {
+            name: {
                 required: true
             },
             email: {
                 required: true
             },
-            phone: {
-                required: true
-            },
-            people: {
-                required: true
-            },
-            package: {
-                required: true
-            },
         },
-        
-        groups: {
-            book_date: "start_date end_date"
+
+        messages: {
+            name: "",
+            email: "",
         },
 
         highlight: function(element) {
@@ -50,7 +42,7 @@
             $(element).closest('.form-group').removeClass('has-error');
         },
         errorElement: 'strong',
-        errorClass: 'help-block',
+        errorClass: 'help-block fa fa-exclamation-triangle',
         errorPlacement: function(error, element) {
             if(element.parent('.form-group').length) {
                 error.insertBefore(element);

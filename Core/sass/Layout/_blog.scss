@@ -1,51 +1,119 @@
 .blog {
-    padding: 2.25rem 0;
-
-	.thumbnail-info {
-    	margin: 0 0 2rem;
+    .desc-area {
+    	margin: 0 0 40px;
+		text-align: center;
 
 		@include breakpoint(wide) {
-			margin: 0 0 3rem;
+			padding: 0 100px;
 		}
+    }
 
-		.desc-area {
-			h3 {
-				margin: 0 0 16px;
-				font-family: poppins-regular;
-				line-height: 130%;
-				font-size: 1.4em;
-				color: $text-darker;
-				
-				@include breakpoint(tablet) {
-					font-size: 1.6em;
+    .blog-list {
+    	.grid {
+    		margin: 0 auto;
+    	}
+
+    	.grid-item {
+    		.content-wrapper {
+    			padding: 10px 0;
+
+				@include breakpoint(wide) {
+					padding: 10px;
 				}
+    		}
 
-				a {
-					color: $text-darker;
+    		&:nth-child(3n+2) {
+    			.blog-item {
+    				background-color: $secondary;
 
-					&:hover {
-						color: $secondary;
+    				.text-area {
+						color: $white;
+
+						h4 {
+							color: $white;
+
+							a {
+								color: $white;
+							}
+						}
 					}
+					.link-area {
+						a {
+							color: $white;
+						}
+
+						i {
+							border-color: $white;
+						}
+					}
+    			}
+    		}
+
+    		&:nth-child(3n+3) {
+    			.blog-item {
+    				background-color: $primary;
+
+    				.text-area {
+						color: $white;
+
+						h4 {
+							color: $white;
+
+							a {
+								color: $white;
+							}
+						}
+					}
+					.link-area {
+						a {
+							color: $white;
+						}
+
+						i {
+							border-color: $white;
+						}
+					}
+    			}
+    		}
+    	}
+
+    	.blog-item {
+			border-radius: 20px;
+			box-shadow: 0 0px 5px rgba(54,54,54,0.3);
+			background-color: $bg-gray;
+
+    		@include breakpoint(wide) {
+				width: 260px;
+			}
+
+			.image-area {
+				background-color: $white;
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+
+				img {
+					border-top-left-radius: 20px;
+					border-top-right-radius: 20px;
 				}
 			}
-		}
 
-		.date {
-			font-size: 0.8em;
-			text-transform: uppercase;
-			letter-spacing: 1pt;
-			color: $text;
-			margin: 0 0 8px;
-			display: block;
-		}
+    		.link-area {
+    			margin: 24px 0 0;
 
-		.link-area {
-			font-size: 1.2em;
+    			a {
+    				color: $text-darkgray;
+    				text-transform: uppercase;
+				    font-family: poppins-medium;
 
-			a {
-				color: $tosca;
+    				&:hover {
+    					
+						i {
+							margin: 0 0 0 10px;
+						}
+					}
+    			}
 
-				span {
+    			span {
 					display: inline-block;
 					vertical-align: middle;
 				}
@@ -54,196 +122,35 @@
 					width: 20px;
 					height: 20px;
 					line-height: 16px;
-					border: 1px solid $tosca;
+					border: 1px solid $text-darkgray;
 					font-size: 0.9em;
 					margin: 0 0 0 4px;
 					text-align: center;
 					vertical-align: middle;
 					border-radius: 100%;
-					transition: margin cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
-				}
-
-				&:hover {
-					color: $secondary;
-					
-					i {
-						border-color: $secondary;
-						margin: 0 0 0 10px;
-					}
-				}
-			}
-		}
-	}
-
-    .image-area {
-    	.gallery-image {
-    		.image {
-    			@include breakpoint(wide) {
-				    padding: 0 0 65%;
+            		transition: margin cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s;
 				}
     		}
-		}
-	}
-}
 
+    		.text-area {
+    			padding: 24px 16px;
+    			color: $text-darkgray;
 
-.blog-detail {
-	padding: 2.25rem 0;
+    			h4 {
+    				margin: 0 0 16px;
+				    font-family: poppins-medium;
+				    line-height: 140%;
+				    letter-spacing: 0.5pt;
 
-	.col-md-9,
-	.col-md-3 {
-		padding: 0;
-	}
+				    a {
+				    	color: $text-darkgray;
+				    }
+    			}
 
-	.detail-blog-area {
-	    margin: 0 0 32px;
-
-		@include breakpoint(wide) {
-		    margin: 0;
-		}
-
-	    
-		.wrapper {
-			@include breakpoint(wide) {
-				padding: 0 8% 0 0;
-			}
-		}
-
-		.info-area {
-			margin: 0 0 24px;
-		}
-
-		.tag-social {
-			position: relative;
-
-			.social-share {
-				@include breakpoint(tablet) {
-					margin: 0;
-					position: absolute;
-					top: 50%;
-					bottom: initial;
-					right: 0;
-					left: initial;
-					transform: translate(0, -50%);
-				}
-			}
-		}
-
-		.tag-area {
-			@include breakpoint(tablet) {
-				padding: 0 30% 0 0;
-			}
-		}
-
-		.date {
-			font-size: 0.8em;
-			text-transform: uppercase;
-			letter-spacing: 1pt;
-			color: $text;
-			margin: 0 0 8px;
-			display: block;
-		}
-
-		.title {
-			font-size: 1.4em;
-			margin: 0 0 16px;
-			font-family: poppins-regular;
-			line-height: 130%;
-
-			@include breakpoint(tablet) {
-				font-size: 2.2em;
-			}
-
-			a {
-				color: $text-darker;
-
-				&:hover {
-					color: $secondary;
-				}
-			}
-		}
-
-		.content-area {
-			img {
-				margin: 0 0 16px;
-				@include breakpoint(tablet) {
-					margin: 0 0 24px;
-				}
-			}
-
-			p {
-				margin: 0 0 16px;
-				
-				@include breakpoint(tablet) {
-					margin: 0 0 24px;
-				}
-			}
-
-			.social-share {
-				padding: 24px 0 0;
-				border-top: 1px solid $text-darker;
-			}
-		}
-	}
-
-	.sidebar {
-		.wrapper {
-			padding: 32px 0 0;
-			border-top: 1px solid $text-darker;
-
-			@include breakpoint(wide) {
-				padding: 0;
-				border: 0;
-			}
-		}
-
-		.side-group {
-			margin: 0 0 32px;
-
-			@include breakpoint(tablet) {
-				margin: 0 0 40px;
-			}
-
-			.list-item {
-				ul {
-					margin: 0;
-					padding: 0;
-					list-style: none;
-				}
-
-				li {
-					margin: 0 0 16px;
-
-					a {
-						display: inline-block;
-						font-size: 1.1em;
-						color: $text;
-						position: relative;
-						padding: 0 0 0 16px;
-						line-height: 160%;
-
-						i {
-							position: absolute;
-							top: 2px;
-							bottom: initial;
-							left: 0;
-							right: initial;
-						}
-
-						&:hover {
-							color: $tosca;
-						}
-					}
-
-					&:last-child {
-						margin: 0;
-					}
-				}
-			}
-
-			&:last-child {
-				margin: 0;
-			}
-		}
-	}
+    			p {
+    				font-size: 0.9em;
+    			}
+    		}
+    	}
+    }
 }
