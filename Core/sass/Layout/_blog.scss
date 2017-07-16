@@ -37,7 +37,7 @@
 							}
 						}
 					}
-					.link-area {
+					.link-action {
 						a {
 							color: $white;
 						}
@@ -64,7 +64,7 @@
 							}
 						}
 					}
-					.link-area {
+					.link-action {
 						a {
 							color: $white;
 						}
@@ -97,39 +97,16 @@
 				}
 			}
 
-    		.link-area {
+    		.link-action {
     			margin: 24px 0 0;
 
     			a {
     				color: $text-darkgray;
-    				text-transform: uppercase;
-				    font-family: poppins-medium;
-
-    				&:hover {
-    					
-						i {
-							margin: 0 0 0 10px;
-						}
-					}
     			}
 
-    			span {
-					display: inline-block;
-					vertical-align: middle;
-				}
-
-				i {
-					width: 20px;
-					height: 20px;
-					line-height: 16px;
+    			i {
 					border: 1px solid $text-darkgray;
-					font-size: 0.9em;
-					margin: 0 0 0 4px;
-					text-align: center;
-					vertical-align: middle;
-					border-radius: 100%;
-            		transition: margin cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s;
-				}
+    			}
     		}
 
     		.text-area {

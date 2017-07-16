@@ -1,10 +1,10 @@
-.contact {
-	.form-area {
+.form-area {
+	&.form-contact {
+		text-align: center;
 		padding: 24px 16px;
 		background-color: $secondary;
-		text-align: center;
 		border-radius: 20px;
-		
+
 		@include breakpoint(tablet) {
 			padding: 2rem;
 		}
@@ -12,31 +12,31 @@
 		@include breakpoint(wide) {
 			padding: 3rem;
 		}
+	}
 
-		.title-area {
-			margin: 0 0 24px;
-			color: $white;
+	.title-area {
+		margin: 0 0 24px;
+		color: $white;
+		
+		@include breakpoint(wide) {
+			padding: 0 50px;
+		}
+
+		h5 {
+			font-size: 1.3em;
+			line-height: 150%;
+			margin: 0 0 16px;
+			font-family: poppins-regular;
 			
-			@include breakpoint(wide) {
-				padding: 0 50px;
+			@include breakpoint(tablet) {
+				font-size: 1.4em;
 			}
+		}
 
-			h5 {
-				font-size: 1.3em;
-				line-height: 150%;
-				margin: 0 0 16px;
-				font-family: poppins-regular;
-				
-				@include breakpoint(tablet) {
-					font-size: 1.4em;
-				}
-			}
-
-			p {
-				margin: 0;
-				line-height: 150%;
-				font-size: 0.9em;
-			}
+		p {
+			margin: 0;
+			line-height: 150%;
+			font-size: 0.9em;
 		}
 	}
 
@@ -49,8 +49,9 @@
 			border: 0;
 			padding: 11px 10px 10px;
 			height: auto;
-			color: $text-darkgray;
+			color: $text;
 			font-size: 1em;
+		    line-height: 150%;
 			border-radius: 10px;
 
 			@include breakpoint(tablet) {
@@ -63,19 +64,19 @@
 		}
 
 		::-webkit-input-placeholder {
-			color: $text-darkgray;
+			color: $text;
 		}
 
 		:-moz-placeholder {
-			color: $text-darkgray;
+			color: $text;
 		}
 
 		::-moz-placeholder {
-			color: $text-darkgray;
+			color: $text;
 		}
 
 		:-ms-input-placeholder {  
-			color: $text-darkgray;
+			color: $text;
 		}
 
 		label {
@@ -107,8 +108,8 @@
 			left: initial;
 			right: 10px;
 			font-size: 1.6em;
-			height: 48px;
-			line-height: 48px;
+			height: 40px;
+			line-height: 40px;
 			pointer-events: none;
 			
 			@include breakpoint(tablet) {
@@ -184,6 +185,5 @@
 				width: auto;
 			}
 		}
-
 	}
 }

@@ -192,12 +192,14 @@ section {
 	padding: 4px 8px;
 	text-transform: uppercase;
 	letter-spacing: 0.5pt;
+	font-family: poppins-regular;
 	box-shadow: 0 1px 10px rgba(54,54,54,0.5);
 
 	&.discount {
 		left: initial;
 		right: 10px;
 		background-color: $green;
+		padding: 6px 8px 4px;
 	}
 
 	&.hot {
@@ -452,66 +454,38 @@ section {
 	}
 }
 
-.jcf-select {
-	display: block;
-	outline: 0;
-	box-shadow: none;
-	border-radius: 0;
-	border-color: $black;
-	padding: 11px 32px 10px 10px;
-	height: auto;
-	color: $text-darkgray;
-	cursor: pointer;
+.link-action {
+	margin: 16px 0 0;
 
-	@include breakpoint(tablet) {
-		padding: 11px 42px 10px 20px;
-	}
+	a {
+		text-transform: uppercase;
+	    font-family: poppins-medium;
 
+		&:hover {
+			color: $secondary;
 
-	.jcf-select-text {
-		font-size: 1em;
-		margin: 0;
-		cursor: pointer;
-		font-size: 16px;
-
-		@include breakpoint(tablet) {
-			font-size: 1.2em;
+			i {
+				margin: 0 0 0 10px;
+				border: 1px solid $secondary;
+			}
 		}
 	}
 
-	.jcf-select-opener {
-		background-color: transparent;
-	}
-}
-
-.jcf-focus, 
-.jcf-focus * {
-	border-color: $tosca!important;
-}
-
-.jcf-list {
-	.jcf-option {
-		font-size: 1.2em;
-		height: auto;
-		padding: 11px 20px 10px;
-		color: $text-darkgray;
-	}
-}
-
-.jcf-select-drop {
-	.jcf-select-drop-content {
-		border-color: $tosca;
+	span {
+		display: inline-block;
+		vertical-align: middle;
 	}
 
-	.jcf-hover {
-		background-color: $tosca;
-		color: $white;
-	}
-}
-
-.jcf-list-box {
-	.jcf-selected {
-		background-color: $tosca;
-		color: $white;
+	i {
+		font-size: 1.1em;
+		width: 20px;
+		height: 20px;
+		line-height: 16px;
+		border: 1px solid $primary;
+		margin: 0 0 0 4px;
+		text-align: center;
+		vertical-align: middle;
+		border-radius: 100%;
+		transition: margin cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s;
 	}
 }

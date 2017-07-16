@@ -3,8 +3,6 @@
 }
 
 #download-thumb {
-	// background-color: $bg-default;
-
 	.info-area {
 		@include breakpoint(wide) {
 			padding: 100px 0 0;
@@ -20,7 +18,7 @@
 
 #partner {
 	background-color: $bg-default;
-	
+
 	.wrapper-content {
 		@include breakpoint(wide) {
 			padding: 0 0 0 30px;

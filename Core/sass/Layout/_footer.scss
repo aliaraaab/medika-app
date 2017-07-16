@@ -1,8 +1,16 @@
 footer {
 	background-color: $bg-gray;
-
-	p {
-		// color: $white;
+	padding: 50px 0 20px;
+	
+	@include breakpoint(wide) {
+		padding: 50px 0 30px;
+	}
+	.copyright {
+		margin: 30px 0 0;
+		font-size: 0.7em;
+		letter-spacing: 0.5pt;
+		text-align: center;
+		line-height: 150%;
 	}
 
 	ul {
@@ -11,7 +19,6 @@ footer {
 
 		li {
 			a {
-				// color: $white;
 				color: $text;
 
 				&:hover {
@@ -43,151 +50,166 @@ footer {
 		padding: 0;
 	}
 
-	.nav-top {
-		padding: 2rem 0 1rem;
-		
-		@include breakpoint(wide) {
-			padding: 3rem 0 1rem;
+	.nav-left {
+		margin: 0 0 30px;
+
+		@include breakpoint(tablet) {
+			padding: 0 30px 0 0;
+			float: left;
+			width: 50%;
+			margin: 0;
+		}
+	}
+
+	.nav-right {
+		@include breakpoint(tablet) {
+			padding: 0 0 0 30px;
+			float: left;
+			width: 50%;
 		}
 
-		.col-md-8 {
-			margin: 0 0 24px;
-			padding: 0;
-			
+		.nav-group-full {
+			float: left;
+			width: 50%;
+			padding: 0 8px 0 0;
+
 			@include breakpoint(tablet) {
-				margin: 0;
-				padding: 0 15px;
+				padding: 0 16px 0 0;
 			}
-		}
-
-		.col-md-4 {
-			padding: 0;
-
-			@include breakpoint(tablet) {
-				padding: 0 15px;
-			}
-		}
-
-		.nav-group {
-			margin: 0 0 24px;
 
 			&:last-child {
-				margin: 0;
-			}
-
-			.form-newsletter {
-				position: relative;
-
-				input[type="text"] {
-					width: 100%;
-					background-color: rgba(255, 255, 255, 0.9);
-					padding: 8px 44px 8px 16px;
-					color: #6b6c6e;
-					outline: 0;
-					border: 0;
-					font-family: poppins-regular;
-				}
-
-				button {
-					position: absolute;
-					top: 50%;
-					bottom: initial;
-					right: 16px;
-					left: initial;
-					cursor: pointer;
-				    line-height: 100%;
-				    color: $primary;
-					transition: all 0.3s linear;
-					transform: translate(0, -50%);
-
-					&:hover {
-						color: $tosca;
-					}
-				}
-
-				i {
-					font-size: 1.4em;
-					line-height: 100%;
-				}
-			}
-
-			.download-link {
-				display: table;
-				width: 100%;
+				padding: 0 0 0 8px;
 
 				@include breakpoint(tablet) {
-					display: block;
+					padding: 0 0 0 16px;
 				}
+			}		
+		}
+	}
 
-				li {
-					width: 50%;
-					margin: 0;
-					padding: 0 8px 0 0;
+	.nav-group {
+		margin: 0 0 30px;
 
-					@include breakpoint(tablet) {
-						width: auto;
-					}
+		&:last-child {
+			margin: 0;
+		}
 
-					&:last-child {
-						padding: 0 0 0 8px;
-					}
-				}
+		h6 {
+			color: $text-darkgray;
+			font-size: 1.1em;
+			margin: 0 0 10px;
+		}
 
-				a {
-					display: inline-block;
-					width: 100%;
-					height: 50px;
-					text-indent: -6666em;
-					-moz-background-size: contain;
-					background-size: contain;
-					background-repeat: no-repeat;
-					background-position: center;
+		.form-newsletter {
+			position: relative;
 
-					@include breakpoint(tablet) {
-						width: 130px;
-						height: 40px;
-					}
+			@include breakpoint(wide) {
+				width: 55%;
+			}
 
-					&.appstore {
-						background-image: url('../img/mcd_button_playstore.png');
-					}
+			input[type="text"] {
+				width: 100%;
+				background-color: rgba(255, 255, 255, 0.9);
+				padding: 8px 44px 8px 16px;
+				color: #6b6c6e;
+				outline: 0;
+				border: 0;
+				font-family: poppins-regular;
+			}
 
-					&.playstore {
-						background-image: url('../img/mcd_button_appstore.png');
-					}
+			button {
+				position: absolute;
+				top: 50%;
+				bottom: initial;
+				right: 16px;
+				left: initial;
+				cursor: pointer;
+			    line-height: 100%;
+			    color: $primary;
+			    outline: 0;
+			    box-shadow: none;
+				transition: all 0.3s linear;
+				transform: translate(0, -50%);
+
+				&:hover {
+					color: $secondary;
 				}
 			}
 
-			small {
-				margin: 8px 0 0;
+			i {
+				font-size: 1.4em;
+				line-height: 100%;
+			}
+		}
+
+		.download-link {
+			display: table;
+			width: 100%;
+
+			@include breakpoint(tablet) {
 				display: block;
 			}
-		}
-	}
-	
-	.nav-bottom {
-		// background-color: $dark-gray;
-		padding: 1.25rem 0;
-		text-align: center;
 
-		.copyright {
-			margin: 0;
-			font-size: 0.7em;
+			li {
+				width: 50%;
+				margin: 0;
+				padding: 0 8px 0 0;
+
+				@include breakpoint(tablet) {
+					width: auto;
+				}
+
+				&:last-child {
+					padding: 0 0 0 8px;
+				}
+			}
+
+			a {
+				display: inline-block;
+				width: 100%;
+				height: 50px;
+				text-indent: -6666em;
+				-moz-background-size: contain;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+
+				@include breakpoint(tablet) {
+					width: 130px;
+					height: 40px;
+				}
+
+				&.appstore {
+					background-image: url('../img/mcd_button_playstore.png');
+				}
+
+				&.playstore {
+					background-image: url('../img/mcd_button_appstore.png');
+				}
+			}
+		}
+
+		small {
+			margin: 8px 0 0;
+			display: block;
 			letter-spacing: 0.5pt;
+
+			a {
+				text-decoration: underline;
+			}
 		}
 	}
 
-	.label-title {
-		// color: $text;
+	.label-group {
 		color: $text-darkgray;
 	    font-family: poppins-medium;
 	}
 
-	.call-us {
+	.nav-list {
 		margin: 0;
 		
 		li {
-			margin: 0 0 4px;
+			margin: 0 0 8px;
 
 			&:last-child {
 				margin: 0;
