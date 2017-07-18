@@ -1,0 +1,224 @@
+.career {
+	padding-top: 20px;
+
+	@include breakpoint(wide) {
+		padding-top: 50px;
+	}
+
+	.title-area {
+		text-align: center;
+		margin: 0 0 30px;
+
+		@include breakpoint(tablet) {
+			margin: 0 0 50px;
+			padding: 0 130px;
+		}
+
+		h5 {
+			color: $primary;
+			font-size: 1.4em;
+			line-height: 130%;
+			margin: 0 0 8px;
+		}
+	}
+
+	.career-area {
+		@include breakpoint(tablet) {
+			padding: 0 130px;
+		}
+
+		.list-accordion {
+			margin: 0;
+
+			.panel {
+				margin: 0 0 10px;
+				border-color: $border-soft-gray;
+				border-radius: 10px;
+
+				@include breakpoint(tablet) {
+					margin: 0 0 20px;
+				}
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+
+		.card-header {
+			h5 {
+				margin: 0;
+				font-family: poppins-regular;
+				font-size: 1.1em;
+				
+				@include breakpoint(tablet) {
+					font-size: 1.3em;
+				}
+
+				a {
+					display: block;
+					position: relative;
+					padding: 10px 40px 10px 10px;
+					border-top-left-radius: 10px;
+					border-top-right-radius: 10px;
+					transition: none;
+
+					@include breakpoint(tablet) {
+						padding: 10px 50px 10px 20px;
+					}
+
+					&[aria-expanded="true"] {
+						background-color: $bg-default;
+
+						i {
+							&:before {
+								content: "\f139";
+							}
+						}
+					}
+
+					&:focus {
+						color: $primary;
+					}
+
+					&.collapsed {
+						background-color: transparent;
+					}
+
+					i {
+						font-size: 1.3em;
+						position: absolute;
+						top: 50%;
+						bottom: initial;
+						left: initial;
+						right: 10px;
+						transform: translate(0,-50%);
+						
+						@include breakpoint(tablet) {
+							right: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		.panel-collapse {
+			background-color: $bg-default;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+
+			.list-group-wrapper {
+				padding: 10px 10px 20px;
+			
+				@include breakpoint(tablet) {
+					padding: 20px;
+				}
+			}
+
+			.list-group {
+				&:last-child {
+					margin: 0;
+				}
+
+				.button-area {
+					margin: 30px 0 0;
+				}
+
+				h6 {
+					font-size: 1em;
+					margin: 0 0 10px;
+					color: $primary;
+					line-height: 150%;
+					
+					@include breakpoint(tablet) {
+						font-size: 1.1em;
+					}
+				}
+
+				ol,
+				ul {
+					padding: 0 0 0 20px;
+				}
+
+				p {
+					margin: 0;
+					font-size: 0.9em;
+
+					@include breakpoint(tablet) {
+						font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+
+	.form-career {
+		.form-group {
+			.form-control {
+				background-color: rgba(241,241,241,0.8);
+			}
+		}
+
+		.cv-upload {
+			text-align: center;
+			margin: 30px 0;
+
+			label {
+				outline: 0;
+				border: 0;
+				margin: 0;
+				text-align: left;
+				position: relative;
+				padding: 0 0 0 40px;
+				font-weight: normal;
+				font-size: 1em;
+				max-width: 100%;
+				text-transform: none;
+				letter-spacing: 0;
+
+				@include breakpoint(tablet) {
+					font-size: 1.15em;
+					height: 40px;
+					padding: 0 0 0 60px;
+				}
+
+				@include breakpoint(wide) {
+					max-width: 50%;
+				}
+
+				.fa {
+					width: 30px;
+					height: 30px;
+					text-align: center;
+					line-height: 30px;
+					background-color: $primary;
+					color: $white;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: initial;
+					bottom: initial;
+					border-radius: 100%;
+
+					@include breakpoint(tablet) {
+						width: 40px;
+						height: 40px;
+						line-height: 40px;
+					}
+				}
+
+				.upload-file {
+					span {
+						color: $primary;
+					}
+
+					small {
+						display: block;
+						font-style: italic;
+						color: $text;
+					}
+				}
+			}
+		}
+	}
+}

@@ -38,19 +38,19 @@
 					border-radius: 100%;
 
 					&.active {
-						background: $tosca;
+						background: $secondary;
 						color: $white;
 						border: 0;
 						box-shadow: none;
 
 						&.active {
-							background: $tosca;
+							background: $secondary;
 							color: $white;
 						}
 
 						&:hover {
 							&.active {
-								background: $tosca;
+								background: $secondary;
 								color: $white;	
 							}
 						}
@@ -58,12 +58,12 @@
 				}
 
 				&.today {
-					background: $tosca;
+					background: $secondary;
 					color: $white;
 
 					&:hover {
 						&:hover {
-							background: $tosca;
+							background: $secondary;
 							color: $white;	
 						}
 					}
