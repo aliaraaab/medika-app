@@ -1,0 +1,234 @@
+.promo-detail {
+	background-color: $bg-default;
+
+	.detail-info {
+		// margin: 0 0 30px;
+
+		// @include breakpoint(tablet) {
+		// 	margin: 0;
+		// }
+
+		h5 {
+			font-size: 1.3em;
+			line-height: 150%;
+			color: $primary;
+			font-family: poppins-medium;
+			margin: 0 0 8px;
+		}
+	}
+
+	.sub-info {
+		position: relative;
+		margin: 0 0 30px;
+
+		// @include breakpoint(tablet) {
+		// 	margin: 0;
+		// }
+
+		.logo-area {
+			text-align: center;
+			margin: 0 0 30px;
+			
+			@include breakpoint(tablet) {
+				position: absolute;
+				top: 0;
+				bottom: initial;
+				left: 0;
+				right: initial;
+				padding: 10px;
+			    width: 160px;
+				background-color: rgba(255, 255, 255, 0.6);
+				margin: 0;
+			}
+
+			img {
+				max-height: 90px;
+			}
+		}
+
+		.badge {
+			position: relative;
+			top: initial;
+			right: initial;
+			box-shadow: none;
+		}
+
+		.info-area {
+			position: relative;
+			
+			@include breakpoint(tablet) {
+				padding: 0 0 0 180px;
+			}
+
+			h6 {
+				margin: 0;
+				font-size: 1.1em;
+				color: $primary;
+				line-height: 160%;
+			}
+
+			.discount-area {
+				margin: 0 0 10px;
+			}
+
+			.social-media {
+				padding: 0;
+				margin: 20px 0 0;
+
+				li {
+					a {
+						font-size: 1.1em;
+						width: 30px;
+						height: 30px;
+						display: inline-block;
+						line-height: 30px;
+						text-align: center;
+						background-color: $primary;
+						color: $white;
+						border-radius: 100%;
+
+						&.instagram {
+							background-color: $secondary;
+
+							&:hover {
+								background-color: $primary;
+							}
+						}
+
+						&.twitter {
+							background-color: $twitter;
+
+							&:hover {
+								background-color: $primary;
+							}
+						}
+
+						&.facebook {
+							background-color: $facebook;
+
+							&:hover {
+								background-color: $primary;
+							}
+						}
+
+						&.youtube {
+							background-color: $pinterest;
+
+							&:hover {
+								background-color: $primary;
+							}
+						}
+
+						i {
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.map-tabs {
+		.col-sm-6 {
+			padding: 0;
+			margin: 0 0 30px;
+
+			@include breakpoint(tablet) {
+				margin: 0;
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	.tabs-area {
+		.nav-tabs {
+			border: 0;
+
+			li {
+				margin: 0;
+
+				a {
+					position: relative;
+					margin: 0;
+					background-color: transparent;
+					border-radius: 0;
+    				color: $text-darkgray;
+					font-family: poppins-regular;
+					border: 0;
+					font-size: 1em;
+					padding: 10px;
+
+					@include breakpoint(tablet) {
+						font-size: 1.1em;
+						padding: 10px 15px;
+					}
+
+					@include breakpoint(wide) {
+						font-size: 1.2em;
+						padding: 10px 20px;
+					}
+
+					&:after  {
+						content: "";
+						position: absolute;
+						top: initial;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						height: 1px;
+						background-color: $text-darkgray;
+						transition: all 0.3s linear;
+					}
+
+					&:hover {
+						background-color: transparent;
+						border: 0;
+					}
+				}
+
+				&.active {
+					a {
+						&:after  {
+							height: 3px;
+							background-color: $primary;
+						}
+					}
+					a,
+					a:hover,
+					a:focus {
+						background-color: transparent;
+						border: 0;
+						outline: 0;
+						color: $primary;
+						border: 0;
+					}
+				}
+			}
+		}
+
+		.tab-content {
+			margin: 30px 0 0;
+
+			ul {
+				padding: 0 0 0 20px;
+			}
+
+			.content-area {
+				@include breakpoint(tablet) {
+			    	padding: 0 10px;
+				}
+
+				@include breakpoint(wide) {
+			    	padding: 0 20px;
+				}
+
+				p {
+					font-size: 0.9em;
+				}
+			}
+		}
+	}
+}

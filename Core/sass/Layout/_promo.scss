@@ -5,8 +5,6 @@
 
 		.category {
 			margin: 0 0 30px;
-			// @include breakpoint(tablet) {
-			// }
 		}
 
 		.category-wrapper {
@@ -16,8 +14,6 @@
 		.category-nav-slide {
 			padding: 10px;
 			border: 1px solid $border-soft-gray;
-			// display: table;
-			// width: 100%;
 			border-radius: 10px;
 
 			@include breakpoint(tablet) {
@@ -62,52 +58,13 @@
 					}
 
 					&:hover {
-						background-color: $secondary;
-						color: $white;
+						@include breakpoint(wide) {
+							background-color: $secondary;
+							color: $white;
+						}
 					}
 				}
 			}
-
-			// li {
-			// 	margin: 0 30px 0 0;
-			// 	margin: 0;
-			// 	width: 20%;
-			// 	text-align: center;
-			// 	float: left;
-
-			// 	@include breakpoint(tablet) {
-			// 		display: table-cell;
-			// 		vertical-align: middle;
-			// 		float: none;
-			// 	}
-
-			// 	a {
-			// 		padding: 6px 12px;
-			// 		display: inline-block;
-			// 		border-radius: 10px;
-
-			// 		&.active {
-			// 			background-color: $primary;
-			// 			color: $white;
-			// 		}
-
-			// 		&:hover {
-			// 			background-color: $secondary;
-			// 			color: $white;
-			// 		}
-			// 	}
-
-			// 	&:last-child {
-			// 		margin: 0;
-			// 	}
-
-			// 	&.active {
-			// 		a {
-			// 			background-color: $primary;
-			// 			color: $white;
-			// 		}
-			// 	}
-			// }
 		}
 
 		.sort-area {
@@ -115,12 +72,6 @@
 				@include breakpoint(tablet) {
 					width: 250px;
 					float: right;
-					// position: absolute;
-					// top: 50%;
-					// bottom: initial;
-					// left: initial;
-					// right: 0;
-					// transform: translate(0,-50%);
 				}
 			}
 
