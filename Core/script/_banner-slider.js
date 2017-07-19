@@ -4,7 +4,7 @@
 		dots: true,
 		arrows: false,
 		autoplay: false,
-		// autoplay: true,
+		autoplay: true,
 		speed: 500,
 		autoplaySpeed: 5000,
 		infinite: true,

@@ -130,4 +130,23 @@
     		}
     	}
     }
+
+    &.detail {
+		.title-area {
+			text-align: center;
+			margin: 0 0 30px;
+
+			@include breakpoint(tablet) {
+				margin: 0 0 50px;
+				padding: 0 130px;
+			}
+
+			h5 {
+				color: $primary;
+				font-size: 1.4em;
+				line-height: 130%;
+				margin: 0 0 8px;
+			}
+		}
+    }
 }
