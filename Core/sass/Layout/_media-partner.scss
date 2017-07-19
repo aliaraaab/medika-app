@@ -1,5 +1,13 @@
 .media-partner {
 	background-color: $bg-default;
+	background-image: url('../img/bg-split.png');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+	@include breakpoint(tablet) {
+		padding: 50px 0 80px;
+	}
 
 	.desc-area {
 		@include breakpoint(wide) {

@@ -18,7 +18,7 @@
 		});
 
 		var $root = $('html, body');
-	 	$("header nav .menu a").on('click', function(e) {
+	 	$(".full header nav .menu a").on('click', function(e) {
 			e.preventDefault();
 			$root.animate({ 
 				scrollTop: $($(this).attr('href')).offset().top - 60

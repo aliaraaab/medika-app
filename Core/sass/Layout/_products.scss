@@ -1,14 +1,11 @@
 .products {
-	background-color: $bg-gray;
+	background-color: #f4f4f4;
 	position: relative;
 	
 	@include breakpoint(wide) {
 		padding-top: 100px;
 	}
-	// .wrapper-content {
-	// 	padding: 32px 0;
-	// }
-
+	
 	.container {
 		z-index: 1;
 		position: relative;
