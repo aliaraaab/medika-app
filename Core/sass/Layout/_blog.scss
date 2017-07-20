@@ -1,4 +1,59 @@
 .blog {
+	.nav-category {
+		margin: 0 0 30px;
+
+		.category-slide {
+			padding: 10px;
+			border: 1px solid $border-soft-gray;
+			border-radius: 10px;
+			margin: 0 0 30px;
+			display: inline-block;
+			width: 100%;
+			
+			@include breakpoint(tablet) {
+				padding: 10px 16px;
+			}
+
+			@include breakpoint(wide) {
+				padding: 10px 20px;
+			}
+
+			.slide {
+				text-align: center;
+			}
+
+			a {
+				padding: 6px 12px;
+				display: inline-block;
+				white-space: nowrap;
+				border-radius: 10px;
+
+				@include breakpoint(tablet) {
+					font-size: 0.9em;
+				}
+
+				@include breakpoint(wide) {
+					font-size: 1em;
+				}
+
+				&.active {
+					background-color: $primary;
+					color: $white;
+				}
+
+				&:hover {
+					@include breakpoint(wide) {
+						background-color: $secondary;
+						color: $white;
+					}
+				}
+			}
+		}
+
+		.slick-dots {
+			bottom: - 20px;
+		}
+	}
     .desc-area {
     	margin: 0 0 40px;
 		text-align: center;
